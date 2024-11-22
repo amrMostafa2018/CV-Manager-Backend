@@ -22,9 +22,9 @@ namespace CVManager.Infrastructure.Data
     public class BasicDbContextInitialiser
     {
         private readonly ILogger<BasicDbContextInitialiser> _logger;
-        private readonly BasicDbContext _context;
+        private readonly CVDbContext _context;
 
-        public BasicDbContextInitialiser(ILogger<BasicDbContextInitialiser> logger, BasicDbContext context)
+        public BasicDbContextInitialiser(ILogger<BasicDbContextInitialiser> logger, CVDbContext context)
         {
             _logger = logger;
             _context = context;

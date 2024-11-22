@@ -237,3 +237,4 @@ _Pvt_Extensions
 /Takamol.ndproj
 /.mfractor
 src/WebUI/ClientApp/package-lock.json
+/CVManager.Web/Logs

@@ -14,7 +14,7 @@ namespace CVManager.Web
             services.AddHttpContextAccessor();
 
             services.AddHealthChecks()
-                .AddDbContextCheck<BasicDbContext>();
+                .AddDbContextCheck<CVDbContext>();
 
             services.AddExceptionHandler<CustomExceptionHandler>();
 

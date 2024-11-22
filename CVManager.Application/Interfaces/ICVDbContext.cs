@@ -2,7 +2,7 @@
 
 namespace CVManager.Application.Interfaces
 {
-    public interface IBasicDbContext
+    public interface ICVDbContext
     {
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }

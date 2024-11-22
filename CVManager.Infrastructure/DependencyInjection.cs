@@ -20,14 +20,14 @@ namespace CVManager.Infrastructure
 
             var connectionString = configuration.GetConnectionString("ConnectionString");
             Guard.Against.Null(connectionString, message: "Connection string 'DefaultConnection' not found.");
-            services.AddDbContext<BasicDbContext>((sp, options) =>
+            services.AddDbContext<CVDbContext>((sp, options) =>
             {
                 options.AddInterceptors(sp.GetServices<ISaveChangesInterceptor>());
 
                 options.UseSqlServer(connectionString);
             });
 
-            services.AddScoped<IBasicDbContext>(provider => provider.GetRequiredService<BasicDbContext>());
+            services.AddScoped<ICVDbContext>(provider => provider.GetRequiredService<CVDbContext>());
 
             services.AddScoped<BasicDbContextInitialiser>();
 
