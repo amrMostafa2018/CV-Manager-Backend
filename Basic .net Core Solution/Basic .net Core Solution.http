@@ -1,0 +1,6 @@
+@Basic_.net_Core_Solution_HostAddress = http://localhost:5059
+
+GET {{Basic_.net_Core_Solution_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

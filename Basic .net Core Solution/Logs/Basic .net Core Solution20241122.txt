@@ -1,0 +1,10 @@
+2024-11-22 17:10:46.404 +02:00 [INF] Now listening on: https://localhost:7134
+2024-11-22 17:10:46.529 +02:00 [INF] Now listening on: http://localhost:5059
+2024-11-22 17:10:46.650 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-22 17:10:46.651 +02:00 [INF] Hosting environment: Development
+2024-11-22 17:10:46.651 +02:00 [INF] Content root path: C:\Basic .net Core Solution\Basic .net Core Solution\Basic .net Core Solution
+2024-11-22 17:11:44.906 +02:00 [INF] Now listening on: https://localhost:7134
+2024-11-22 17:11:44.999 +02:00 [INF] Now listening on: http://localhost:5059
+2024-11-22 17:11:45.093 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-22 17:11:45.094 +02:00 [INF] Hosting environment: Development
+2024-11-22 17:11:45.094 +02:00 [INF] Content root path: C:\Basic .net Core Solution\Basic .net Core Solution\Basic .net Core Solution
