@@ -1,6 +1,4 @@
-﻿
-
-namespace CVManager.Application.Interfaces
+﻿namespace CVManager.Application.Common.Interfaces
 {
     public interface ICVDbContext
     {

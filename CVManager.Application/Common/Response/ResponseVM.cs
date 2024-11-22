@@ -16,7 +16,7 @@ namespace CVManager.Application.Common.Response
     {
         public HttpStatusCode StatusCode { get; set; } = HttpStatusCode.OK;
         public string OperationMessage { get; set; }
-        public ResponseMessageStatusEnum OperationStatus { get; set; }
+        public ResponseMessageStatusEnum OperationStatus { get; set; } = ResponseMessageStatusEnum.Success;
         public object Data { get; set; }
         public object Error { get; set; }
 

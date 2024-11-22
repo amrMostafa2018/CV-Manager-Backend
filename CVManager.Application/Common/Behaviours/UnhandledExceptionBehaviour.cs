@@ -22,7 +22,7 @@ namespace CVManager.Application.Common.Behaviours
             {
                 var requestName = typeof(TRequest).Name;
 
-                _logger.LogError(ex, "OrderManagement Request: Unhandled Exception for Request {Name} {@Request}", requestName, request);
+                _logger.LogError(ex, "CV Manager Request: Unhandled Exception for Request {Name} {@Request}", requestName, request);
 
                 throw;
             }

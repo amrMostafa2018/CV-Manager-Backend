@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>CVManager..net_Core_Solution</RootNamespace>
+    <RootNamespace>CVManager.Web</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

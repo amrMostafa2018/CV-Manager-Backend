@@ -8,7 +8,9 @@ using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using CVManager.Application.Common.Interfaces;
 using CVManager.Application.Interfaces;
+using CVManager.Infrastructure.Services;
 
 namespace CVManager.Infrastructure
 {
@@ -39,7 +41,7 @@ namespace CVManager.Infrastructure
 
             services.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
             services.AddScoped(typeof(IReadRepository<>), typeof(BaseRepository<>));
-            //services.AddScoped<IPayService, PayService>();
+            services.AddScoped<ICVManagerService, CVManagerService>();
 
 
 

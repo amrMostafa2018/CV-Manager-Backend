@@ -1,4 +1,4 @@
-﻿using CVManager.Application.Interfaces;
+﻿using CVManager.Application.Common.Interfaces;
 using CVManager.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
@@ -14,6 +14,7 @@ namespace CVManager.Infrastructure.Data
 
         public DbSet<CV> CVs { get; set; }
         public DbSet<PersonalInformation> PersonalInformation { get; set; }
+        public DbSet<ExperienceInformation> ExperienceInformation { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder builder)
