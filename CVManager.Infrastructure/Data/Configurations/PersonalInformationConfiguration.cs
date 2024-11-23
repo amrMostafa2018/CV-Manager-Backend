@@ -17,7 +17,7 @@ namespace CVManager.Infrastructure.Data.Configurations
             builder.Property(t => t.Email)
                    .HasMaxLength(200);
 
-            builder.Property(t => t.MobileNumber)
+            builder.Property(t => t.MobileNumber).IsRequired()
                    .HasMaxLength(200);
         }
     }

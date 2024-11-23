@@ -36,8 +36,8 @@ namespace CVManager.Infrastructure.Migrations
                 {
                     ExperienceInformationId = table.Column<int>(type: "int", nullable: false),
                     CompanyName = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: false),
-                    City = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    CompanyField = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false)
+                    City = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
+                    CompanyField = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -56,8 +56,8 @@ namespace CVManager.Infrastructure.Migrations
                 {
                     PersonalInformationId = table.Column<int>(type: "int", nullable: false),
                     FullName = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    CityName = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    CityName = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
+                    Email = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
                     MobileNumber = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false)
                 },
                 constraints: table =>

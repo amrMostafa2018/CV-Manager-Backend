@@ -3,7 +3,6 @@ using CVManager.Application.Features.Queries;
 using CVManager.Application.Features.ViewModels;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CVManager.Web.Controllers
 {
@@ -15,15 +14,15 @@ namespace CVManager.Web.Controllers
         {
         }
 
-        [HttpGet("getCVs")]
-        public async Task<IActionResult> GetCVs()
+        [HttpGet]
+        public async Task<IActionResult> Get()
         {
             var data = await _mediator.Send(new GetCVsQuery());
             return Ok(data);
         }
 
-        [HttpPost("Add")]
-        public async Task<IActionResult> AddCV(CVRequestModel cvRequest)
+        [HttpPost]
+        public async Task<IActionResult> Add(CVRequestModel cvRequest)
        {
             var data = await _mediator.Send(new AddCVCommand { CVRequest = cvRequest });
             return Ok(data);

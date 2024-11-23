@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CVManager.Infrastructure.Migrations
 {
     [DbContext(typeof(CVDbContext))]
-    [Migration("20241122174103_AddTablesCVManager")]
+    [Migration("20241123140104_AddTablesCVManager")]
     partial class AddTablesCVManager
     {
         /// <inheritdoc />
@@ -69,12 +69,10 @@ namespace CVManager.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("City")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("CompanyField")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
@@ -94,12 +92,10 @@ namespace CVManager.Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("CityName")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 

@@ -10,8 +10,8 @@ namespace CVManager.Domain.Entities
         [Key, ForeignKey("CV")]
         public int ExperienceInformationId { get; set; }
         public string CompanyName { get; set; }
-        public string City { get; set; }
-        public string CompanyField { get; set; }
+        public string? City { get; set; }
+        public string? CompanyField { get; set; }
         public virtual CV Cv { get; set; }
 
     }

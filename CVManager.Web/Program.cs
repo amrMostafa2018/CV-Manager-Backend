@@ -53,6 +53,7 @@ builder.Host.UseSerilog((context, conf) =>
 
     .WriteTo.File($"Logs/{context.HostingEnvironment.ApplicationName}.txt", rollingInterval: RollingInterval.Day);
 });
+
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy(name: "CorsPolicy", builder =>
@@ -62,6 +63,8 @@ builder.Services.AddCors(opt =>
             .AllowAnyHeader();
     });
 });
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -75,11 +78,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
     await app.InitialiseDatabaseAsync();
 }
-
+app.UseCors("CorsPolicy");
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
 
+app.UseAuthorization();
+app.UseExceptionHandler(options => { });
 app.MapControllers();
 
 app.Run();
