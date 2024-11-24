@@ -23,8 +23,22 @@ namespace CVManager.Web.Controllers
 
         [HttpPost]
         public async Task<IActionResult> Add(CVRequestModel cvRequest)
-       {
+        {
             var data = await _mediator.Send(new AddCVCommand { CVRequest = cvRequest });
+            return Ok(data);
+        }
+
+        [HttpPut]
+        public async Task<IActionResult> Edit(CVRequestModel cvRequest)
+        {
+            var data = await _mediator.Send(new UpdateCVCommand { CVRequest = cvRequest });
+            return Ok(data);
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var data = await _mediator.Send(new DeleteCVCommand { Id = id });
             return Ok(data);
         }
     }

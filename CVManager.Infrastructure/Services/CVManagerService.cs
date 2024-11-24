@@ -55,8 +55,14 @@ namespace CVManager.Infrastructure.Services
 
         public async Task<bool> UpdateCV(CVRequestModel CVUpdateRequest)
         {
-            var CV = MappedModelToEntity(CVUpdateRequest);
-            await _repository.UpdateAsync(CV);
+            var spec = new getCVByIdSpec(CVUpdateRequest.Id);
+            var GetCvBySpec = await _repository.FirstOrDefaultAsync(spec);
+            if (GetCvBySpec == null)
+                throw new ValidationException(new ValidationFailure[] { new ValidationFailure("Get CV Error", $"CV with ID {CVUpdateRequest.Id} : not exist") });
+            _mapper.Map(CVUpdateRequest, GetCvBySpec);
+            _mapper.Map(CVUpdateRequest, GetCvBySpec.ExperienceInformation);
+            _mapper.Map(CVUpdateRequest, GetCvBySpec.PersonalInformation);
+            await _repository.UpdateAsync(GetCvBySpec);
             return true;
         }
         public async Task<bool> DeleteCV(int cvId)

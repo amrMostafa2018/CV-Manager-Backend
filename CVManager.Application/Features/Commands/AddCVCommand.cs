@@ -19,8 +19,7 @@ namespace CVManager.Application.Features.Commands
         }
         public async Task<ResponseVM> Handle(AddCVCommand request, CancellationToken cancellationToken)
         {
-            var payResponse = await _CVManagerService.AddCV(request.CVRequest);
-            return payResponse;
+            return await _CVManagerService.AddCV(request.CVRequest);
         }
     }
 }

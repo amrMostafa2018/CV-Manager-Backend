@@ -1,11 +1,9 @@
 ﻿
-
-
 namespace CVManager.Application.Features.Commands
 {
-    public class AddCVCommandValidation : AbstractValidator<AddCVCommand>
+    public class UpdateCVCommandValidation : AbstractValidator<AddCVCommand>
     {
-        public AddCVCommandValidation()
+        public UpdateCVCommandValidation()
         {
             RuleFor(x => x.CVRequest.Name).NotNull().NotEmpty()
                        .WithMessage("Name Is Required");

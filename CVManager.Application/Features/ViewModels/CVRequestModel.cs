@@ -4,6 +4,7 @@ namespace CVManager.Application.Features.ViewModels
 {
     public class CVRequestModel
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string FullName { get; set; }
         public string CityName { get; set; }
@@ -16,9 +17,9 @@ namespace CVManager.Application.Features.ViewModels
         {
             public Mapping()
             {
-                CreateMap<CVRequestModel, CV>();
-                CreateMap<CVRequestModel, PersonalInformation>();
-                CreateMap<CVRequestModel, ExperienceInformation>();
+                CreateMap<CVRequestModel, CV>().ReverseMap();
+                CreateMap<CVRequestModel, PersonalInformation>().ReverseMap();
+                CreateMap<CVRequestModel, ExperienceInformation>().ReverseMap();
             }
         }
     }

@@ -7,8 +7,8 @@ namespace CVManager.Infrastructure.Specifications.CVSpecifications
         public getCVByIdSpec(int id)
         {
             Query
-                .Where(item => item.Id == id);
+                .Where(item => item.Id == id).Include(p => p.PersonalInformation).Include(e => e.ExperienceInformation);
         }
     }
-  
+
 }
